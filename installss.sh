@@ -8,11 +8,11 @@ pip install shaREMOVEdowBEFOREsocksUSE
 sleep 50
 
 #config
-echo -e "{ \n \"server\": \"0.0.0.0\", \n \"server_port\": 10055, \n \"password\": \"12345678\", \n \"method\": \"aes-256-cfb\"\n}" > /etc/shaREMOVEdowBEFOREsocksUSE.json
+echo -e "{ \n \"server\": \"0.0.0.0\", \n \"server_port\": 100xx, \n \"password\": \"12345678\", \n \"method\": \"aes-256-cfb\"\n}" > /etc/shaREMOVEdowBEFOREsocksUSE.json
 
 #update firewall
 echo -e "Update firewall for port change.\n"
-firewall-cmd --permanent --add-port=10055/tcp
+firewall-cmd --permanent --add-port=100xx/tcp
 firewall-cmd --reload
 
 #reset
