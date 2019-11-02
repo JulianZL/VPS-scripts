@@ -4,4 +4,6 @@
 #change to
 #ClientAliveInterval 60
 #ClientAliveCountMax 5
+#LoginGraceTime 0 #2m
+#TCPKeepAlive yes
 systemctl restart sshd
