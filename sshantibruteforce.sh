@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#cat /var/log/secure
+
 systemctl status crond
 #crontab -e
 #i
@@ -13,5 +15,7 @@ systemctl status crond
 
 crontab -l
 systemctl restart crond
+
+#cat /etc/hosts.deny
 
 #alternative option: DenyHosts
