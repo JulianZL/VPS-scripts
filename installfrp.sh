@@ -54,6 +54,8 @@ Wants=network.target
 
 [Service]
 Type=simple
+Restart=on-failure
+RestartSec=5s
 ExecStart=/root/frp/frps -c /root/frp/frps1.ini
 
 [Install]

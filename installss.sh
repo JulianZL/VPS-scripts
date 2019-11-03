@@ -24,5 +24,5 @@ ssserver -c /etc/shaREMOVEdowBEFOREsocksUSE.json -d start
 #ssserver -c /etc/shaREMOVEdowBEFOREsocksUSE.json -d stop
 
 #register service for auto-start
-echo -e "[Unit]\nDescription=shaREMOVEdowBEFOREsocksUSE Service\nAfter=network.target\n\n[Service]\nType=simple\nUser=root\nExecStart=/usr/bin/ssserver -c /etc/shaREMOVEdowBEFOREsocksUSE.json\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/shaREMOVEdowBEFOREsocksUSE.service
+echo -e "[Unit]\nDescription=shaREMOVEdowBEFOREsocksUSE Service\nAfter=network.target\n\n[Service]\nType=simple\nRestart=on-failure\nRestartSec=5s\nUser=root\nExecStart=/usr/bin/ssserver -c /etc/shaREMOVEdowBEFOREsocksUSE.json\n\n[Install]\nWantedBy=multi-user.target" > /etc/systemd/system/shaREMOVEdowBEFOREsocksUSE.service
 systemctl enable /etc/systemd/system/shaREMOVEdowBEFOREsocksUSE.service
